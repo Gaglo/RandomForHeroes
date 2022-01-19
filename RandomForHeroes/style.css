@@ -1,0 +1,53 @@
+body {
+    background-color: burlywood;
+}
+/**/
+.mainBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input_box {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+    border-bottom: 1px solid black;
+}
+
+.output_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30vh;
+}
+
+.vertical_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid black;*/
+}
+
+.horizontal_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid black;*/
+}
+
+.eny_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start_button {
+    width: 70px;
+    height: 30px;
+}
