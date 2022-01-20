@@ -4,14 +4,16 @@ class CastleTown {
     name
     simpleName
     isChecked
+    iconURL
     icon
     constructor(id, name, simpleName, isChecked, iconURL) {
         this.id = id
         this.name = name
         this.simpleName = simpleName
         this.isChecked = isChecked
+        this.iconURL = iconURL
         this.icon = Object.assign(new Image, {
-            src: iconURL
+            src: this.iconURL
         })
         // this.buildGUI(parent)
     }
@@ -71,11 +73,12 @@ function random () {
     let selectedCastles = getSelectedCastles()
     let comparedList = comparedLists(selectedCastles)
     let randomCastle = royalRandom(comparedList)
-    let img = randomCastle.getIcon()
-    console.log(randomCastle.getIcon())
-    console.log(img)
-    let obj = new CastleTown('13', randomCastle.name, 'simplname', false, img)
+    let img = randomCastle.iconURL
+    console.log('icon: ' + randomCastle.getIcon())
+    console.log('imgIconURL: ' + img)
+    let obj = new CastleTown('13', randomCastle.name, randomCastle.simpleName, false, img)
     obj.buildGUI('output_box')
+    // randomCastle.buildGUI('output_box')
     // randomCastle.buildGUI('output_box')
     // console.log(randomCastle.name)
 }
