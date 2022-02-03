@@ -76,8 +76,11 @@ function random () {
     let img = randomCastle.iconURL
     console.log('icon: ' + randomCastle.getIcon())
     console.log('imgIconURL: ' + img)
+    console.log('objId: ' + randomCastle.id)
     let obj = new CastleTown('13', randomCastle.name, randomCastle.simpleName, false, img)
     obj.buildGUI('output_box')
+    // castles.splice(randomCastle.id, 1)
+    console.log(castles)
     // randomCastle.buildGUI('output_box')
     // randomCastle.buildGUI('output_box')
     // console.log(randomCastle.name)
@@ -86,6 +89,9 @@ function random () {
 function getSelectedCastles() {
     let castleId = []
     let list = document.getElementsByTagName('input')
+    if(list.length == 0) {
+        return alert('Замков нима')
+    }
     for (let input of list) {
         if(input.checked) {
             castleId.push(input.id)
